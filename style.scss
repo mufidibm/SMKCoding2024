@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@mixin flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.container-1 {
+    //border: 4px solid black;
+    height: 400px;
+}
+
+.bg-content-1 {
+    @include flex-box();
+    background-color: #F6EBDA;
+    height: 300px;
+    width: 100%;
+    min-width: 850px;
+    margin-top: 80px;
+
+    img {
+        filter: invert(99%) sepia(97%) saturate(558%) hue-rotate(313deg) brightness(98%) contrast(92%) opacity(0.4);
+        min-width: 850px;
+        width: 100%;
+        height: 270px;
+    }
+}
+
+.content-side {
+    position: relative;
+    @include flex-box();
+    //border: 1px solid black;
+    width: 100%;
+    bottom: 300px;
+
+    .content-left-spmenu {
+        width: 50%;
+        min-width: 425px;
+        height: 100%;
+        //border: 1px solid black;
+
+        img {
+            border: 4px solid #ffffff70;
+            border-radius: 10px;
+            box-shadow: 4px 4px 5px rgba(122, 120, 120, 0.39);
+            position: relative;
+            left: 220px;
+            bottom: 50px;
+            width: 225px;
+        }
+    }
+
+    .content-right-spmenu {
+        width: 50%;
+        height: 100%;
+        //border: 1px solid black;
+
+        .about-us {
+            transform: scale(0.8);
+            max-width: 65%;
+
+            h4 {
+                margin-bottom: 30px;
+
+                u {
+                    text-decoration: underline;
+                    text-decoration-color: orange;
+                }
+
+            }
+
+            h5 {
+                font-weight: 600;
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-weight: 200;
+                margin-bottom: 20px;
+            }
+
+            button {
+                border: none;
+                height: 25px;
+                width: 100px;
+                border-radius: 20px;
+                background-color: #2F2105;
+                color: #e7b14c;
+
+                span {
+                    @include flex-box();
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+}
+
+.container-2 {
+    //background-color: cyan;
+    //border: 2px solid black;
+    flex-direction: column;
+    //margin-left: 200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    h5 {
+        font-size: 22px;
+        margin-bottom: 30px;
+        font-weight: bold;
+        margin-left: 15%;
+
+        u {
+            text-decoration: underline;
+            text-underline-position: under;
+            text-decoration-color: orange;
+        }
+    }
+
+    .content-card {
+        //border: 2px solid black;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+
+        .card {
+            @include flex-box();
+            border: none;
+            box-shadow: -0.3px 2px 3px 3px rgba(0, 0, 0, 0.066);
+            height: 200px;
+            width: 185px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 50px;
+
+            .pelapisfoto {
+                //border: 1px solid black;
+                width: 87%;
+                height: 86%;
+
+                .image-rate {
+                    //border: 1px solid black;
+                    height: 72%;
+
+                    img {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        border-radius: 7px;
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .rate {
+                        position: relative;
+                        bottom: 121px;
+                        right: 12px;
+                        border: 3px solid #a49c9c;
+                        border-radius: 30px;
+                        background-color: white;
+                        display: flex;
+                        width: 42%;
+                        scale: 0.6;
+
+
+                        .skor {
+                            position: relative;
+                            align-self: flex-end;
+                            scale: 0.7;
+                            left: 6px;
+                        }
+
+                        .bintang {
+                            position: relative;
+                            left: 2px;
+                            bottom: 1.5px;
+                            scale: 0.63;
+                        }
+                    }
+                }
+
+                .informasi {
+                    //border: 1px solid black;
+                    display: flex;
+                    font-size: 12px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    height: 14%;
+
+                    .nama {
+                        position: relative;
+                        width: 80%;
+                        //border: 1px solid black;
+                    }
+
+                    .harga {
+                        display: flex;
+                        justify-content: flex-end;
+                        position: relative;
+                        width: 20%;
+                        //border: 1px solid black;
+                    }
+                }
+
+                .details-cart {
+                    //border: 1px solid black;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    height: 15%;
+
+                    .details-sub {
+                        width: 83%;
+                        //border: 1px solid black;
+
+                        .one-line {
+                            position: relative;
+                            top: 6px;
+                        }
+
+                        p {
+                            font-weight: 300;
+                            font-size: 9px;
+                        }
+                    }
+
+                    .keranjang {
+
+                        button {
+                            @include flex-box();
+                            border: none;
+                            width: 105%;
+                            height: 100%;
+                            border-radius: 100%;
+                            background-color: rgb(236, 97, 23);
+                            position: relative;
+                            top: 1.5px;
+                        }
+
+
+                        img {
+                            scale: 0.9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
